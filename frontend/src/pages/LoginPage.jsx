@@ -104,7 +104,7 @@ const LoginPage = () => {
   return (
     <div
       className="min-w-screen min-h-screen p-12 bg-center bg-cover"
-      style={{ backgroundImage: `url('/assets/assets/login-bg.jpg')` }}
+      style={{ backgroundImage: `url('/assets/login-bg.jpg')` }}
     >
       <div className="sm:w-[490px] sm:h-[590px] mx-auto rounded-lg p-7 bg-white shadow-2xl shadow-yellow-800">
         <div className="flex flex-row items-center justify-center sm:mb-10 gap-x-5">

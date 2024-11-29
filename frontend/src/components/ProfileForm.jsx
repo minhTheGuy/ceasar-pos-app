@@ -12,7 +12,7 @@ import {
 } from "@material-tailwind/react";
 import { GrUpdate } from "react-icons/gr";
 import { PiNumpad } from "react-icons/pi";
-import ProfileBG from "../assets/profile-bg.jpg";
+import ProfileBG from "../../public/assets/profile-bg.jpg";
 import { useSnackbar } from "notistack";
 import { useCookies } from "react-cookie";
 import { jwtDecode } from "jwt-decode";
@@ -20,7 +20,7 @@ import { api } from "../app/api/api";
 import { useState } from "react";
 
 const ProfileForm = ({ userInfo }) => {
-  const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
+  const [cookies, , removeCookie] = useCookies(["jwt"]);
   const { enqueueSnackbar } = useSnackbar();
 
   const [openCPModal, setOpenCPModal] = useState(false);
@@ -109,7 +109,8 @@ const ProfileForm = ({ userInfo }) => {
             <Avatar
               src={
                 userInfo.avatar
-                  ? "http://localhost:8080/uploads/avatars/" + userInfo.avatar
+                  ? "https://caesarpos-api.vercel.app/uploads/avatars/" +
+                    userInfo.avatar
                   : ""
               }
               alt="avatar"
@@ -119,7 +120,8 @@ const ProfileForm = ({ userInfo }) => {
               color="blue"
               onClick={() =>
                 handleOpenAvatar(
-                  "http://localhost:8080/uploads/avatars/" + userInfo.avatar
+                  "https://caesarpos-api.vercel.app/uploads/avatars/" +
+                    userInfo.avatar
                 )
               }
             />

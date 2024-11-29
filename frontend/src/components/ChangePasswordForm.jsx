@@ -1,4 +1,4 @@
-import ChangeBG from "../assets/cp.jpg";
+import ChangeBG from "../../public/assets/cp.jpg";
 import { useCookies } from "react-cookie";
 import { useState } from "react";
 import { useSnackbar } from "notistack";
@@ -10,7 +10,7 @@ const ChangePasswordForm = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const { enqueueSnackbar } = useSnackbar();
-  const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
+  const [cookies, , removeCookie] = useCookies(["jwt"]);
 
   const handleOldPasswordChange = (e) => setOldPassword(e.target.value);
   const handleNewPasswordChange = (e) => setNewPassword(e.target.value);
