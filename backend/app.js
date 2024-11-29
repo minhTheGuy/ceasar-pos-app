@@ -15,7 +15,7 @@ import cookieParser from 'cookie-parser'
 import path from 'path'
 import { __dirname } from './src/utils/fileUtils.js'
 
-configDotenv({ path: './config.env' })
+configDotenv({})
 
 const app = express()
 
