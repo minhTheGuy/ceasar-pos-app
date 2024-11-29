@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(
     cors({
-        origin: 'https://caesarpos-client.vercel.app',
+        origin: ['https://caesarpos-client.vercel.app', 'https://ceasar-pos-app-client.vercel.app'],
         credentials: true,
     }),
 )
