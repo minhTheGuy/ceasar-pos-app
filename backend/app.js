@@ -40,7 +40,7 @@ app.use('/api/v1/staffs', staffRoute)
 app.use('/api/v1/orders', orderRoute)
 
 app.get('/', (req, res) => {
-    res.send(`Welcome to Phone Store POS API, ${MONGODB_URI}`)
+    res.send(`Welcome to Phone Store POS API, ${process.env.MONGO_URI}`)
 })
 
 // Error Handling
