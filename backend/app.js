@@ -39,6 +39,10 @@ app.use('/api/v1/products', productRoute)
 app.use('/api/v1/staffs', staffRoute)
 app.use('/api/v1/orders', orderRoute)
 
+app.get('/', (req, res) => {
+    res.send(`Welcome to Phone Store POS API, ${MONGODB_URI}`)
+})
+
 // Error Handling
 app.all('*', (req, res, next) => {
     next(new AppError(`Can't find ${req.originalUrl} on this server`, 404))
