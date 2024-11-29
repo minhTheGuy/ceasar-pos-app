@@ -155,7 +155,7 @@ const StaffTable = ({ staffs }) => {
                   <div className="flex items-center gap-x-3">
                     <Avatar
                       src={
-                        "http://localhost:8080/uploads/avatars/" + staff.avatar
+                        "https://caesarpos-api.vercel.app/uploads/avatars/" + staff.avatar
                       }
                       alt={staff.fullname}
                       size="md"
